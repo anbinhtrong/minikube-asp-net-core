@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dotnetcoreapp
+spec:
+  containers:
+    - image: anbinhtrong/hostingmvc
+      name: dotnetcoreapp
+      imagePullPolicy: Always
+      resources: {}
+      ports:
+        - containerPort: 8080
