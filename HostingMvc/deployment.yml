@@ -1,27 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
-    app: dotnetcoreapp
-  name: dotnetcoreapp
+    component: web
+  name: client-deployment
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
-      app: dotnetcoreapp
-  strategy: {}
+      app: client-app
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: dotnetcoreapp
+        app: client-app
     spec:
       containers:
       - image: anbinhtrong/hostingmvc
-        name: dotnetcoreapp
+        name: client-app
         imagePullPolicy: Always
-        resources: {}
         ports:
-          - containerPort: 8080 
-status: {}
+          - containerPort: 80
