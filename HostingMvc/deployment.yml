@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      component: web
   template:
     metadata:
       labels:
-        app: web
+        component: web
     spec:
       containers:
       - image: anbinhtrong/hostingmvc

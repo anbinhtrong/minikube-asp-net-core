@@ -8,6 +8,7 @@ spec:
         - port: 3050
           targetPort: 80
           nodePort: 31515
+          protocol: TCP
     selector:
         component: web
   
