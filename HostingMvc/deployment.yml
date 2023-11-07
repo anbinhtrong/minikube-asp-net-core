@@ -8,15 +8,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: client-app
+      app: web
   template:
     metadata:
       labels:
-        app: client-app
+        app: web
     spec:
       containers:
       - image: anbinhtrong/hostingmvc
-        name: client-app
+        name: client
         imagePullPolicy: Always
         ports:
           - containerPort: 80
